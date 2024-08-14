@@ -12,6 +12,10 @@ form {
     background-color: #efd9f3;
 }
 
+h3 {
+    margin-bottom: 5px;
+}    
+
 aside {
     padding: 48px;
 }
@@ -47,6 +51,19 @@ inpu[type=number] {
     font-size: 14px;
   }
 
-  footer {
+.center {    
     text-align: center;
-  }
+}
+
+#btn-center {    
+    text-align: center;
+}
+
+#no-mrgn {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+footer {    
+    text-align: center;
+}
