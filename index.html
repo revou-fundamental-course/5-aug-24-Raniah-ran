@@ -1,109 +1,75 @@
-<!DOCTYPE html>
-<html lng="en">
+<!DOCTYE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator BMI</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="main-title" style="color:rgb(76, 19, 119);">Kalkulator BMI</h1>
+            <p class="main-title"> Body Mass Index (BMI) is a measurement that compares a person's weight and height to assess 
+                whether they are underweight, normal weight, overweight, or obese.
+            </p> 
+            <hr>
+        </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta></meta>
-    <title>Calculator BMI</title>
-    <link rel="stylesheet" href="css\style.css">
-</head>
-<body>
-    <header>
-        <h1 class="main-title">Kalkulator BMI</h1>
-    </header>
-    <main>
-        <aside>
-            <article>
-                <p>Berat Badan Ideal adalah wiiiiiiiiiiiiiiiiiii wiiiiiiiiiiiiiiiiiii wiiiiiiiiiiiiiii wiiiiiiiiiiiiiiiii</p>
-            </article>
-            
-            <form>
-                <div>
-                    <h3>Jenis Kelamin</h3>
-                    <input type="radio" id="laki-laki" name="jenis kelamin" value="laki-laki"><label for="laki-laki">Laki-Laki</label>
-                    <input type="radio" id="perempuan" name="jenis kelamin" value="perempuan"><label for="perempuan">Perempuan</label>
-                </div>
-                <div>
-                    <h3>Berat Badan (kg)</h3>
-                    <input id="weight" type="numbers">
-                </div>
-                <div>
-                    <h3>Usia (Tahun)</h3>
-                    <input type="numbers">
-                </div>
-                <div>
-                    <h3>Tinggi Badan (m)</h3>
-                    <input id="height" type="numbers">
-                </div>
-                <div class="form-btn-container">
-                    <button onclick="calculateBmi()" class="button bg-blue">Hitung BMI</button>
-                    <button onclick="reload()" class="button bg-red">Reset</button>
-                </div>
-
-                <script src="script.js"></script>
-            </form>
-    
-            <article>
-                <header>
-                    <h4>Keunggulan fitur</h4>
-                </header>
-                <p>
-                    BMI adalah indikator pengukuran yang digunakan untuk menentukan kategori berat badan ideal atau tidak. 
-                    BMI dikembangkan oleh Adolphe Quetelet selama abad ke-19. 
-                    Melalui hasil perhitungan BMI, Anda akan mengetahui kategori berat badan, yaitu kurus, ideal, berlebihan, atau bahkan obesitas.
-                </p>
-            </article>
-        </aside>
+        <main>
+            <aside>
+                <section>
+                    <p><b>Jenis Kelamin</b></p>
+                    <input type="radio" id="laki-laki" name="jenis kelamin" value="laki-laki"><label for="laki-laki">Laki-Laki</label></br>
+                    <input type="radio" id="perempuan" name="jenis kelamin" value="perempuan"><label for="perempuan">Perempuan</label></br>
+                    <label for="age"><b>Age (year)</b></label>
+                    <input id="age" type="numbers"></br>
+                    <label for="weight"><b>Berat Badan (kg)</b></label>
+                    <input id="weight" type="numbers"></br>
+                    <label for="height"><b>Tinggi Badan (m)</b></label>
+                    <input id="height" type="numbers"></body></br>
+                    <button onclick="calculateBmi()" class="button bg-blue">Caculate BMI</button>
+                    <button onclick="clear()" class="button bg-red">Clear</button>
         
-        <aside>
-            <section>
-                <h4>Hasil</h4>
-                <form>
-                    <div class="form-btn-container">
-                        <button class="button bg-blue">Download Hasil BMI</button>
-                    </div>
-                </form>
-                
-                <!-- ada form -->
-                <!-- "Hasil BMI diantara 23 dan 25" -->
-                <p>Hasil BMI diantara 23 dan 25</p>
+                    <h4 id="heading"></h4>
+                    <p id="bmi-output"></p>
+                    <p id="message"></p>
+        
+                    <script src="js/script.js"></script>
+                </section>
+            </aside>
+
+            <aside>
+
+                <ol type="1"> <b style="color:rgb(120, 24, 194);">Advantages of BMI include:</b>
+                    <li>
+                        Simple and Easy to Calculate: BMI only requires height and weight, making it an easy and quick measure that can be calculated without specialized equipment.
+                    </li>
+                    <li>
+                        Cost-Effective: Since BMI relies on basic measurements, it is a cost-effective method for assessing weight status in large populations or individuals.
+                    </li> 
+                    <li>
+                        Widely Used and Standardized: BMI is a globally recognized measure with standardized categories, which helps in comparing health data across different regions and populations.
+                    </li>
+                    <li>
+                        Good for Population-Level Screening: It is effective in identifying trends in obesity and underweight conditions across populations and is commonly used for public health assessments.
+                    </li>
+                    <li>
+                        Predictive of Health Risks: BMI can indicate potential health risks associated with being overweight or underweight, such as cardiovascular disease, diabetes, and certain cancers.
+                    </li>
+                </ol>
+
                 <p>
-                    BMI adalah indikator pengukuran yang digunakan untuk menentukan kategori berat badan ideal atau tidak. 
-                    BMI dikembangkan oleh Adolphe Quetelet selama abad ke-19. 
-                    Melalui hasil perhitungan BMI, Anda akan mengetahui kategori berat badan, yaitu kurus, ideal, berlebihan, atau bahkan obesitas.
+                    <b>Although</b>
+                    BMI is a useful screening tool, 
+                    it does not measure body fat directly, and other factors like muscle mass, bone density, and distribution 
+                    of fat that should be considered too <3
                 </p>
-                <!-- ada pilihan button -->
-                <div class="form-btn-container">
-                    <button class="button bg-blue">Konsultasi Ahli Gizi Via Aplikasi</button>
-                    <button class="button bg-blue">Registrasi Online Ahli Gizi</button>
-                </div>
-                <p>
-                    BMI adalah indikator pengukuran yang digunakan untuk menentukan kategori berat badan ideal atau tidak. 
-                    BMI dikembangkan oleh Adolphe Quetelet selama abad ke-19.
-                </p>
-                <!-- ada beberapa penyakit akibat kegemukan -->
-                <!-- ada pilihan button -->
-                <form>
-                    <p class="center" id="no-mrgn">Beberapa penyakit berasal dari kegemukan </p>
-                    <p class="center" id="no-mrgn">Diabetes</p>
-                    <p class="center" id="no-mrgn">Hipertensi</p>
-                    <p class="center" id="no-mrgn">Sakit Jantung</p>
-                    <p class="center" id="no-mrgn">Osteoarthritis</p>
-                    <div class="form-btn-container">
-                    <button class="button bg-blue" id="btn-center">Konsultasi Ahli Gizi Via Aplikasi</button>
-                    <button class="button bg-blue" id="btn-center">Registrasi Online Ahli Gizi</button>
-                    </div>
-                </form>
-                
-            </section>
-        </aside>
+            </aside>
+           
 
+        </main>
 
-    </main>
-
-    <footer>
-        <p>made by Raniah Mufidah Admayana</p>
-
-    </footer>
-</body>
+        <footer>
+            <p>made by Raniah Mufidah Admayana</p>
+        </footer>
+    </body>
 </html>
