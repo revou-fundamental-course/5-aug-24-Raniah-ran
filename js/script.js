@@ -1,22 +1,31 @@
-<script>
-function calculateBMI() {
-  var height = document.getElementById("height").value;
-  var weight = document.getElementById("weight").value;
-  if (height === "" || isNaN(height) || weight === "" || isNaN(weight)) {
-    document.getElementById("result").innerHTML = "Please enter valid height and weight.";
-    return;
-  }
-  var bmi = weight / ((height / 100) ** 2);
-  var category = "";
-  if (bmi < 18.5) {
-    category = "Underweight";
-  } else if (bmi < 25) {
-    category = "Normal weight";
-  } else if (bmi < 30) {
-    category = "Overweight";
-  } else {
-    category = "Obese";
-  }
-  document.getElementById("result").innerHTML = "Your BMI is " + bmi.toFixed(2) + " (" + category + ")";
+
+
+// function 
+//get values
+// calculate
+// output
+
+// bmi formula weight/height squares 
+
+
+
+function calculateBmi() {
+    let weight = document.getElementById ("weight").value
+    let height = document.getElementById ("height").value
+
+    let bmi = (weight/(height*height))
+
+    document.getElementById("heading").innerHTML = "your BMI is:"
+    document.getElementById("bmi-output").innerHTML = bmi.toFixed(1)
+    
+    if (bmi < 18.5){
+        document.getElementById("message").innerHTML = "You are underweight"
+    } else if (bmi >= 18.5 && bmi <= 24.9) {
+        document.getElementById("message").innerHTML = "You are healthy weight"
+    } else if (bmi = 25.0 && bmi <= 29.9) {
+        document.getElementById("message").innerHTML = "You are overweight"
+    } else {
+        document.getElementById("message").innerHTML = "You are obese"
+    }
+    
 }
-</script>
